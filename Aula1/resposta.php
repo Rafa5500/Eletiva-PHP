@@ -7,7 +7,14 @@
 </head>
 <body>
     <?php
-        $valor = $_POST['valor'];
+        //Este é um comentário de uma linha
+        #Estilo python
+        /*
+            Este é um comentário em bloco
+        */
+        $valor = (int)$_POST['valor'];
+        $valor = (float) $_POST['valor'];
+        $valor = ()$_POST['valor'];
         echo "valor informado: $valor";
     ?>
 </body>

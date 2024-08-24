@@ -12,8 +12,8 @@
         /*
             Este é um comentário em bloco
         */
-        $valor = (int)$_POST['valor'];
-        $valor = (float) $_POST['valor'];
+        $valor1 = (int)$_POST['valor'];
+        $valor2 = (float) $_POST['valor'];
         $valor = ()$_POST['valor'];
         echo "valor informado: $valor";
     ?>

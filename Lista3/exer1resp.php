@@ -17,7 +17,7 @@
                 echo "<p>O valor 1 menos o valor 2 é igual a: $resultado</p>";
             } catch(Exception $e) {
                 echo "Erro!".$e->getMessage();
-                oiejqieoioiy
+            
 
             }
         }

@@ -1,3 +1,7 @@
+<?php
+    declare(strict_types=1);
+    ?>
+
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -9,13 +13,16 @@
   <body>
     <h1>Resposta do exercício 6</h1>
     <?php
+        function numeroArredondado(float $valor1):float
+        {
+          return round($valor1);
+        }
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             try{
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $numero = $_POST['valor1'];
-                    $numeroArredondado = round($numero);
-                    echo "<p class='mt-3'>O número arredondado é: $numeroArredondado</p>";
-                }
+                
+                $valor1 =(float) $_POST['valor1'];
+                echo "<p class='mt-3'>O número $valor1 arredondado é: ".numeroArredondado($valor1)."</p>";
+                
             } catch(Exception $e) {
                 echo "Erro!".$e->getMessage();
 

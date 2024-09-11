@@ -1,3 +1,7 @@
+<?php
+    declare(strict_types=1);
+    ?>
+
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -9,11 +13,14 @@
   <body>
     <h1>Resposta do exercício 5</h1>
     <?php
+        function calcularRaiz(int $valor1):float
+        {
+          return sqrt($valor1);
+        }
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             try{
                 $valor1 = (int) $_POST['valor1'] ?? 0;
-                $raiz_quadrada = sqrt($valor1);
-                echo "<p>A raíz quadrada de $valor1 é igual a: $raiz_quadrada</p>";
+                echo "<p>A raíz quadrada de $valor1 é igual a: ".calcularRaiz($valor1)."</p>";
             } catch(Exception $e) {
                 echo "Erro!".$e->getMessage();
 
